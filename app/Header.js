@@ -3,6 +3,7 @@ import { TbWorld } from "react-icons/tb";
 import Image from 'next/image'
 import React from 'react'
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 export default function 
 () {
@@ -51,9 +52,16 @@ export default function
               </div>
             </div>
             <div className="flex items-center justify-center gap-x-2 my-6">
-              <Button className="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center">
-                <RiShare2Line className="text-neutral-500"/>
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center">
+                    <RiShare2Line className="text-neutral-500"/>
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogTitle className="text-white">Share this Profile</DialogTitle>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
